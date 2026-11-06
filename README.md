@@ -1,4 +1,4 @@
-# fastapi-lecture-demo — версия 2
+# fastapi-lecture-demo
 
 Учебный HTTP API для демонстрации создания, чтения, изменения и удаления ресурсов на FastAPI.
 
