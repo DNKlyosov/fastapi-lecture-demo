@@ -4,8 +4,6 @@
 
 [![Открыть в GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/DNKlyosov/fastapi-lecture-demo?quickstart=1)
 
-> **Важно:** кнопка заработает после публикации этого проекта в репозитории `DNKlyosov/fastapi-lecture-demo` на GitHub. Она запускает временную облачную среду разработки, а не постоянный хостинг API. Требуется вход в GitHub и доступ к Codespaces.
-
 ## Начало работы — через браузер
 
 1. Нажмите **Открыть в GitHub Codespaces** (либо `Code → Codespaces → Create codespace on main`).
@@ -47,8 +45,7 @@
 - `.devcontainer/devcontainer.json` — конфигурация автоматической настройки Codespaces;
 - `.devcontainer/install.sh` — установка библиотек в `.venv`;
 - `.devcontainer/start.sh` — автоматический запуск сервера при открытии Codespace;
-- `tests/test_api.py` — проверки ответов и ошибок;
-- `LECTURE.md` — сценарий демонстрации на 7–10 минут.
+- `tests/test_api.py` — проверки ответов и ошибок.
 
 ## Запуск на собственном компьютере (необязательно)
 
@@ -67,22 +64,6 @@ python -m uvicorn app.main:app --reload --port 8000
 ```bash
 python -m pytest -q
 ```
-
-## Публикация на GitHub владельцем проекта
-
-Этот комплект подготовлен под адрес `https://github.com/DNKlyosov/fastapi-lecture-demo`. Чтобы опубликовать его, создайте **пустой репозиторий** с именем `fastapi-lecture-demo` в своём GitHub (не создавайте в интерфейсе README — он уже есть в проекте). Затем в корне распакованного каталога выполните:
-
-```bash
-git init -b main
-git add .
-git commit -m "feat: создан учебный FastAPI API с запуском в Codespaces"
-git remote add origin https://github.com/DNKlyosov/fastapi-lecture-demo.git
-git push -u origin main
-```
-
-При отсутствии настроенного имени/email Git попросит установить авторство. Репозиторий можно сделать публичным для студентов либо приватным, если используется только преподавателем.
-
-**GitHub Pages для сервера не подходит:** Pages публикует статические файлы, а FastAPI запускается как процесс в Codespaces или другом серверном окружении.
 
 ## Ограничения и безопасность
 
