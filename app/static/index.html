@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог устройств — FastAPI</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">FastAPI · HTTP API</p>
+        <h1>Каталог устройств</h1>
+        <p>Браузер загружает список через <code>GET /api/products</code>. Нажмите на ID, чтобы получить отдельное устройство.</p>
+      </div>
+      <a class="doclink" href="/docs">Документация Swagger UI</a>
+    </header>
+    <section class="panel" aria-labelledby="catalog-title">
+      <div class="panel-top">
+        <div><h2 id="catalog-title">Устройства</h2><p id="counter" class="muted">Загрузка данных…</p></div>
+        <div class="actions">
+          <button id="reload" type="button">Обновить</button>
+          <button id="reset" type="button" class="secondary">Восстановить исходные данные</button>
+        </div>
+      </div>
+      <div class="table-scroll">
+        <table><thead><tr><th>ID</th><th>Название</th><th>Тип</th><th>Состояние</th><th>Цена</th><th>JSON</th></tr></thead>
+        <tbody id="items"><tr><td colspan="6">Загрузка…</td></tr></tbody></table>
+      </div>
+    </section>
+    <section class="panel" aria-labelledby="details-title">
+      <div class="panel-top"><div><h2 id="details-title">Ответ API</h2><p class="muted" id="request">Выберите ID из таблицы</p></div></div>
+      <p class="muted">Здесь отображается фактический JSON-ответ сервера, а не данные, заранее записанные в интерфейсе.</p>
+      <pre id="result">—</pre>
+      <p id="status" role="status" aria-live="polite" class="muted"></p>
+    </section>
+    <section class="panel" aria-labelledby="operations-title">
+      <h2 id="operations-title">Операции API</h2>
+      <p>В <a href="/docs">Swagger UI</a> доступны <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code> и <code>DELETE</code>. Создайте устройство через POST, затем нажмите «Обновить» — оно появится в таблице с новым ID.</p>
+      <p class="muted">Изменения хранятся в памяти сервера. Кнопка «Восстановить исходные данные» отменяет учебные изменения.</p>
+    </section>
+  </main>
+</body>
+</html>
